@@ -1,0 +1,43 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+padding: 0px;
+}
+
+#container{
+ height: 1215px;
+ width: 970px;
+ background-color: White;
+ margin: 0px auto; 
+}
+
+.add_course {
+	width: 369px;
+	margin-bottom: 10px;
+}
+
+#course_name p{
+  display:inline-block;
+}
+
+div button {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table {
+    margin-top: 10px;
+}
+
+/*
+tbody > tr:nth-child(even){
+    background-color: lightgray;
+}
+*/
+
+th {
+    text-align: left;
+    border-left: 1px;
+    background-color: #cc66ff;
+}

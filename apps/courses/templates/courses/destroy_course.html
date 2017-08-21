@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>Delete A Course</title>
+        <meta name="description" content="Delete A Course">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'semirest_users/css/delete_course.css' %}" media="screen" title="no title"  charset="utf-8">
+        <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        {% load static %}
+        <script type="text/javascript" src="{% static 'semirest_users/js/delete_course.js' %}"></script>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Are you sure you want to delete the following course?</h1>
+            <p>Name: {{ course.name }}</p>
+            <p>Description: {{ course.description.desc }}</p>
+        </div>
+        
+        <form action="/" method="get">
+            <button type="submit">No</button>
+        </form>
+        
+        <form action="/destroy_course_confirmed" method="post">
+            {% csrf_token %}
+            <br>
+            <button type="submit">Yes</button>
+            <br>
+        </form>
+    </body>
+</html>
